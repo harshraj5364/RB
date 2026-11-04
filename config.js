@@ -1,9 +1,9 @@
 /* Edit this file to personalise the whole site. */
 const CFG={
   to:'Riya',
-  from:'',            // your name, shown on letters. '' signs as "your friend"
+  from:'Your Laddoo',            // your name, shown on letters. '' signs as "your friend"
   friendsSince:'2024-06-16',  // e.g. '2021-06-15' makes the days page count real days. null shows "so many"
-  whatsapp:'',        // e.g. '919876543210' (country code + number) lets Riya send her note to you
+  whatsapp:'919097538872',        // e.g. '919876543210' (country code + number) lets Riya send her note to you
   photos:[            // put pictures in the photos folder; missing ones show a sketch
     {src:'photos/1.jpg',cap:'A day I would replay forever'},
     {src:'photos/2.jpg',cap:'The one where we could not stop laughing'},
