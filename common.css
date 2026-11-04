@@ -38,3 +38,16 @@ h1 b{display:inline-block;font-weight:700;opacity:0;animation:pop .9s cubic-bezi
 .pen{position:absolute;left:0;top:0;width:0;height:0;opacity:0;pointer-events:none;z-index:6}
 @media(prefers-reduced-motion:reduce){.sw,.next.show{animation:none}}
 @media(max-width:600px){main{gap:1.7rem}}
+[hidden]{display:none!important}
+.shake{animation:sh .5s}
+@keyframes sh{20%,60%{transform:translateX(-12px)}40%,80%{transform:translateX(12px)}}
+.kp{display:grid;grid-template-columns:repeat(3,auto);gap:1.3rem 1.1rem;justify-content:center}
+.gk{position:relative;width:clamp(62px,17vw,80px);aspect-ratio:1;border-radius:12px;border:2.5px solid var(--hd);background:rgba(255,255,255,.7);font:700 2.2rem 'Caveat',cursive;color:var(--hd);cursor:pointer;transition:transform .2s}
+.gk::before{content:'🎀';position:absolute;top:-15px;left:50%;translate:-50% 0;font-size:1.3rem}
+.gk:active{transform:scale(.9) rotate(-4deg)}
+.bx{display:flex;gap:.8rem;justify-content:center}
+.bx i{width:3.2rem;height:3.6rem;border:3px dashed var(--hd);border-radius:12px;display:grid;place-items:center;font:700 2rem 'Caveat',cursive;font-style:normal;color:var(--hd)}
+.fr2{padding:10px;background:#fff;border:3px solid var(--hd);border-radius:6px;box-shadow:0 20px 40px -20px rgba(0,0,0,.4)}
+.back{position:fixed;left:3vw;top:3vh;z-index:5}
+a.btn{text-decoration:none;display:inline-block}
+.tip{opacity:.55;font-size:1rem}
