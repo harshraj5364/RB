@@ -9,7 +9,7 @@ body{--a:#fff8e8;--b:#f6e8cd;--c:#efdcc0;--ink:#6a5035;--hd:#9a6a3a;--pc:#9b8466
 .ev b{position:absolute;left:50%;top:50%;translate:-50% -50%;font-size:2.8rem;color:#c4577a;z-index:2;transition:opacity .5s;animation:hb 1.6s infinite}
 @keyframes hb{50%{scale:1.2}}
 #env.open b{opacity:0}
-.paper{display:none;position:relative;width:min(920px,94vw);padding:3.4rem 3rem 2.4rem 5.6rem;text-align:left;color:#22356b;font:400 clamp(1.5rem,3.2vw,2.3rem)/2.1 'Kalam',cursive;background-color:#fffdf6;background-image:linear-gradient(transparent calc(2.1em - 1px),rgba(120,150,210,.4) 0);background-size:100% 2.1em;background-origin:content-box;background-position:0 -.5em;border-radius:6px;box-shadow:0 2px 0 #eadfc6,0 30px 60px -25px rgba(70,45,10,.5);rotate:-.7deg}
+.paper{display:none;position:relative;width:min(920px,94vw);padding:3.4rem 3rem 2.4rem 5.6rem;text-align:left;color:#22356b;font:500 clamp(1.7rem,3.6vw,2.6rem)/2.1 'Caveat','Kalam',cursive;background-color:#fffdf6;background-image:linear-gradient(transparent calc(2.1em - 1px),rgba(120,150,210,.4) 0);background-size:100% 2.1em;background-origin:content-box;background-position:0 -.5em;border-radius:6px;box-shadow:0 2px 0 #eadfc6,0 30px 60px -25px rgba(70,45,10,.5);rotate:-.7deg}
 .paper::before{content:'';position:absolute;left:4.4rem;top:0;bottom:0;width:2px;background:rgba(224,110,110,.45)}
 .paper.in{display:block;animation:sl 1.3s cubic-bezier(.2,.8,.2,1) both}
 @keyframes sl{from{opacity:0;translate:0 60vh;rotate:6deg}}
@@ -22,17 +22,18 @@ body{--a:#fff8e8;--b:#f6e8cd;--c:#efdcc0;--ink:#6a5035;--hd:#9a6a3a;--pc:#9b8466
 <p class="cap rise" id="hint">a letter is waiting for you…</p>
 <div id="env" class="rise" style="--i:1"><div class="ev"><div class="fl"></div><b>♡</b></div><small>tap the envelope</small></div>
 <article class="paper" id="L">
-<p>प्यारी रिया,</p>
-<p>जन्मदिन मुबारक हो! आज १९ जनवरी है, साल का सबसे ख़ास दिन, जब इस दुनिया को तुम्हारी मुस्कान मिली।</p>
-<p>तुम मेरी सबसे अच्छी दोस्त हो, और मेरी सबसे पसंदीदा इंसान भी। तुम्हारी हँसी मेरे सबसे उदास दिन को भी रोशन कर देती है।</p>
-<p>तुम्हारे साथ बिताया हर पल मेरे लिए एक ख़ूबसूरत याद है। बस यही दुआ है कि तुम यूँ ही मुस्कुराती रहो, और तुम्हारे सारे सपने सच हों।</p>
-<p>यह छोटा-सा तोहफ़ा मैंने दिल से बनाया है, सिर्फ़ तुम्हारे लिए।</p>
-<p class="s">हमेशा तुम्हारा,</p>
-<p><!-- अपना नाम यहाँ लिखो -->तुम्हारा दोस्त ✿</p>
+<p>Dear Riya,</p>
+<p>Happy Birthday! Today is the 19th of January, the most special day of the year, the day the world got your smile.</p>
+<p>You are my best friend and my favourite person. Your laugh can light up even my saddest day.</p>
+<p>Every moment with you is a beautiful memory. All I wish is that you keep smiling like this, and that every one of your dreams comes true.</p>
+<p>I made this little gift with all my heart, only for you.</p>
+<p class="s">Always yours,</p>
+<p id="sg">Your friend ✿</p>
 </article>
 <small class="tip" id="tip" hidden>tap the letter to finish writing instantly</small>
-<button class="next" data-to="page4.html" data-hold>one last page</button>
-</main><script src="common.js"></script><script>
+<button class="next" data-hold>one last page</button>
+</main><script src="config.js"></script><script src="common.js"></script><script>
+if(CFG.from)document.getElementById('sg').textContent=CFG.from+' ✿';
 const env=document.getElementById('env'),L=document.getElementById('L'),h=document.getElementById('hint'),tip=document.getElementById('tip');
 env.onclick=()=>{if(env.classList.contains('open'))return;env.classList.add('open');h.textContent='shhh… read it as it is written ✿';
 setTimeout(()=>env.classList.add('gone'),1000);

@@ -14,9 +14,9 @@ h3{font:700 1.8rem 'Kalam',cursive;color:var(--hd)}
 <h2 class="rise" style="--i:1">little reasons I adore you</h2>
 <div class="grid" id="g"></div>
 <p class="cap" id="k">0 / 6 opened</p>
-<button class="next" data-to="page3.html" data-hold>one more page</button>
-</main><script src="common.js"></script><script>
-const C=[['तुम्हारी हँसी','जिस दिन तुम हँसती हो, उस दिन सब कुछ अच्छा लगता है।'],['तुम्हारी बातें','तुमसे बात करते हुए वक़्त कब बीत जाता है, पता ही नहीं चलता।'],['तुम्हारा दिल','तुम सबका इतना ख़्याल रखती हो कि बस, दिल भर आता है।'],['तुम्हारा साथ','तुम साथ हो तो हर मुश्किल थोड़ी आसान लगने लगती है।'],['तुम्हारी मुस्कान','वो एक मुस्कान ही काफ़ी है मेरा पूरा दिन बना देने के लिए।'],['बस तुम','क्योंकि तुम, तुम हो, और यही सबसे ख़ास बात है।']];
+<button class="next" data-hold>one more page</button>
+</main><script src="config.js"></script><script src="common.js"></script><script>
+const C=[['Your laugh','On the days you laugh, everything feels a little better.'],['Your words','Time disappears whenever I am talking to you.'],['Your heart','You care about everyone so much that it fills my heart too.'],['Your company','With you around, every hard thing gets a little easier.'],['Your smile','That one smile is enough to make my whole day.'],['Just you','Because you are you, and that is the most special thing of all.']];
 const g=document.getElementById('g'),k=document.getElementById('k');let o=0;
 g.innerHTML=C.map(([t,b],i)=>`<div class="fc rise" style="--i:${i+2}"><div class="in"><div class="fr"><span>${'❀✿❁✾❃✽'[i]}</span><h3>${t}</h3></div><div class="bk"><p>${b}</p></div></div></div>`).join('');
 g.querySelectorAll('.fc').forEach(c=>c.onclick=()=>{c.classList.toggle('f');if(!c.dataset.o){c.dataset.o=1;k.textContent=++o+' / 6 opened';if(o==6){k.textContent='all opened, and there are still more reasons than petals ✿';nx.classList.add('show')}}});
